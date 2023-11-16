@@ -7,7 +7,6 @@ function App() {
   return (
     <>
       <Nav />
-      <h1 className="">Hello world!</h1>
       <div>
         <Outlet></Outlet>
       </div>
