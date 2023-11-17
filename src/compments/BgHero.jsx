@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function BgHero() {
   return (
     <>
@@ -20,11 +22,15 @@ function BgHero() {
               Exquisite Restaurant, Where Every Dish Tells a Different Story of
               International Cuisine.
             </p>
-            <button className="btn btn-secondary">Get Started</button>
+            <NavLink to="/contact" className="btn btn-secondary  mx-2">
+              Contact
+            </NavLink>
+            <NavLink to="/menu" className="btn mx-2">
+              Menu
+            </NavLink>
           </div>
         </div>
       </div>
-      ;
     </>
   );
 }

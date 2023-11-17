@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { BgHero } from "../../compments/BgHero";
 
 function Homepage() {

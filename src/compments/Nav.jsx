@@ -75,7 +75,9 @@ export default function Nav() {
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="">
+            <img src={logo} alt="logo" className="h-12" />
+          </a>
         </div>
         <div className="navbar-end">
           <label className="flex cursor-pointer gap-2">
