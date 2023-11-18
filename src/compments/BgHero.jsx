@@ -13,19 +13,20 @@ function BgHero() {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">It's Gravy Nights</h1>
+            <h1 className="mb-5 text-5xl font-bold">
+              Welcome to <br />
+              It's Gravy Nights
+            </h1>
             <p className="mb-5">
-              An Enthralling Haven Where Sizzling Vibes Converge to Ignite an
-              Unforgettable Nightlife Experience. Immerse Yourself in the Heat
-              of the Night and Let Your Senses Explore the Spicy Beats and Hot
-              Flavors of Our Exquisite Afterwork Hotspot, Where Every Moment
-              Tells a Different Tale of Fiery Entertainment
+              where luxury meets extravagance to offer you an unforgettable
+              nightlife experience. Explore our exclusive options to make your
+              evening as memorable as possible.
             </p>
             <NavLink to="/contact" className="btn btn-secondary  mx-2">
               Contact
             </NavLink>
-            <NavLink to="/menu" className="btn mx-2">
-              Menu
+            <NavLink to="/offerings" className="btn mx-2">
+              Offerings
             </NavLink>
           </div>
         </div>

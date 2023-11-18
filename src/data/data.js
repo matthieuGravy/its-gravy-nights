@@ -1,135 +1,90 @@
 const liste = [
   {
-    name: "Shrimp Tomato & Basil",
+    name: "Bronze",
     content:
-      "Indulge in the exquisite flavors of our Shrimp Tomato & Basil dish. Succulent shrimp, ripe tomatoes, and fresh basil come together in a perfect harmony of taste. ",
-    price: 18,
+      "An elegant experience with direct access to the electrifying atmosphere of the club.",
+    price: 500,
     image: "",
     alt: "Image du produit 1",
-    category: "seafood",
+    category: "",
   },
   {
-    name: "Thai-style Chicken Wings",
+    name: "Silver",
     content:
-      "Savor the authentic flavors of Thailand with our tender and spicy chicken wings, a delightful blend of sweet and savory. Perfect for sharing!",
-    price: 17,
+      " Enjoy a more exclusive space, perfect for private celebrations and a more intimate atmosphere.",
+    price: 1000,
     image: "",
     alt: "Image du produit 2",
-    category: "meat",
+    category: "",
   },
   {
-    name: "Cream of Pumpkin Soup",
+    name: "Gold",
     content:
-      "Warm your soul with our creamy and comforting pumpkin soup. A delightful balance of sweetness and spices for a cozy dining experience.",
-    price: 19,
+      "The epitome of luxury, with additional VIP benefits and personalized service for an unparalleled experience.",
+    price: 2000,
     image: "",
     alt: "Image du produit 3",
-    category: "Vegetarian",
-  },
-  {
-    name: "Tomato Soup with Alphabet Pasta",
-    content:
-      "A classic favorite with a twist! Our tomato soup is accompanied by fun alphabet pasta, making it a delightful choice for kids and adults alike.",
-    price: 21,
-    image: "",
-    alt: "Image du produit 4",
     category: "Vegetarian",
   },
 ];
 
 const liste2 = [
   {
-    name: "Ricotta and Basil Pasta",
+    name: "Sapphire",
     content:
-      "Enjoy the goodness of our Ricotta and Basil Pasta, a delightful fusion of creamy ricotta and aromatic basil for a satisfying meal.",
-    price: 32,
+      "An elegant VIP lounge with private performances for an unforgettable evening.",
+    price: 2500,
     image: "",
     alt: "Image du produit 1",
-    category: "Vegetarian",
+    category: "",
   },
   {
-    name: "Saffron Butternut Squash Ravioli",
+    name: "Emerald",
     content:
-      "Indulge in the rich flavors of our Saffron Butternut Squash Ravioli. A delectable combination of butternut squash and saffron in every bite.",
-    price: 38,
+      "A more exquisite VIP experience, with dedicated staff to cater to all your needs.",
+    price: 3500,
     image: "",
     alt: "Image du produit 2",
-    category: "Vegetarian",
+    category: "",
   },
   {
-    name: "Chicken Tikka Masala",
+    name: "Diamond",
     content:
-      "Savor the exotic taste of our Chicken Tikka Masala. Succulent chicken marinated in spices and served in a rich, creamy sauce.",
-    price: 36,
+      "The height of refinement, with exclusive access to artists, top-notch cocktails, and world-class service.",
+    price: 5000,
     image: "",
     alt: "Image du produit 3",
     category: "Meat",
-  },
-  {
-    name: "Global pizza",
-    content:
-      "Our Oriental Pizza skillfully blends Indian spices and Italian craftsmanship for an exotic and delicious culinary experience.",
-    price: 35,
-    image: "",
-    alt: "Image du produit 4",
-    category: "Meat",
-  },
-  {
-    name: "Tofu Pad Thai",
-    content:
-      "Experience the bold flavors of our Tofu Pad Thai. Tofu, rice noodles, and Thai spices combine to create a savory and satisfying dish.",
-    price: 39,
-    image: "",
-    alt: "Image du produit 4",
-    category: "Vegetarian",
   },
 ];
 
 const liste3 = [
   {
-    name: "Norwegian Omelette",
+    name: "Celestial Experience",
     content:
-      "Indulge in the sweet delight of our Norwegian Omelette, a heavenly combination of ice cream and meringue, elegantly flambéed for a memorable experience.",
-    price: 28,
+      "Immerse yourself in a sensory experience with dazzling special effects and surprises throughout the evening.",
+    price: 3000,
     image: "",
     alt: "Image du produit 1",
-    category: "Vegetarian",
+    category: "",
   },
   {
-    name: "Chinese Coconut Balls",
+    name: "Midnight Mystery",
     content:
-      "Satisfy your sweet cravings with our Chinese Coconut Balls, a delectable treat with a crispy exterior and a luscious coconut filling.",
-    price: 22,
+      "A mysterious adventure that will take you to secret locations in the club for a night full of surprises.",
+    price: 4000,
     image: "",
     alt: "Image du produit 2",
-    category: "Vegetarian",
+    category: "",
   },
   {
-    name: "Bingsu",
+    name: "Insane Night",
     content:
-      "Cool down with our refreshing Bingsu, a Korean shaved ice dessert topped with a variety of sweet toppings. A delightful and chilly delight!",
-    price: 29,
+      "For the bold, this experience combines spectacular performances, exotic cocktails, and thrills for a night you'll never forget.",
+    price: 5000,
     image: "",
     alt: "Image du produit 3",
-    category: "Meat",
-  },
-  {
-    name: "Assorted Old-fashioned Cakes",
-    content:
-      "Experience nostalgia with our Assorted Old-fashioned Cakes, a delightful selection of classic cakes that evoke cherished memories.",
-    price: 31,
-    image: "",
-    alt: "Image du produit 4",
-    category: "Meat",
-  },
-  {
-    name: "Café Liégeois",
-    content:
-      "Sip on the exquisite taste of our Café Liégeois, a Belgian dessert featuring coffee, ice cream, and whipped cream for a delightful coffee-infused treat.",
-    price: 25,
-    image: "",
-    alt: "Image du produit 4",
-    category: "Vegetarian",
+    category: "",
   },
 ];
 
