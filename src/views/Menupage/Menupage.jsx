@@ -1,4 +1,5 @@
 import { liste, liste2, liste3 } from "/src/data/data.js";
+import { BigTitle } from "../../compments/Bigtitle";
 
 const ProductMenus = (props) => {
   return (
@@ -31,7 +32,10 @@ const Product = ({ name, content, price, category, image, alt }) => {
 function Menu() {
   return (
     <div>
-      <h1>Menu</h1>
+      <BigTitle
+        title="Life is Music"
+        subtitle="But it's better with our products"
+      />
       <section>
         <ProductMenus list={liste} />
         <ProductMenus list={liste2} />
