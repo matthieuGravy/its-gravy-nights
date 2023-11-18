@@ -1,4 +1,4 @@
-import { liste, liste2 } from "/src/data/data.js";
+import { liste, liste2, liste3 } from "/src/data/data.js";
 
 const ProductMenus = (props) => {
   return (
@@ -35,6 +35,7 @@ function Menu() {
       <section>
         <ProductMenus list={liste} />
         <ProductMenus list={liste2} />
+        <ProductMenus list={liste3} />
       </section>
     </div>
   );
