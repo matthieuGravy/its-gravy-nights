@@ -1,7 +1,7 @@
 function Send() {
   return (
     <div>
-      <h1>Send</h1>
+      <h1>Sended</h1>
     </div>
   );
 }
