@@ -15,6 +15,11 @@ mongoose.connect(process.env.MONGO_URI, {
   useUnifiedTopology: true,
 });
 
+mongoose.connection.on("error", (err) => {
+  console.error("MongoDB connection error:", err);
+});
+
+
 const contactSchema = new mongoose.Schema({
   name: {
     type: String,
