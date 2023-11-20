@@ -1,4 +1,4 @@
-import logo from "../assets/itsgravy.svg";
+import logo from "/src/assets/itsgravynight.svg";
 import { NavLink, useMatch } from "react-router-dom";
 
 export default function Nav() {
