@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 require("dotenv").config();
-const config = require("./config");
+
 const bodyParser = require("body-parser");
 
 const { connectDB, defineContactModel } = require("./db/connect");
