@@ -9,6 +9,26 @@ const app = express();
 const port = 3000;
 
 app.use(cors());
+/*
+// test sans mongoose
+app.post("/send-form", (req, res) => {
+  try {
+    const { name, email, message } = req.body;
+    console.log(req.body);
+
+    // Vous pouvez ignorer la partie de sauvegarde dans la base de données
+    // const contact = new Contact({ name, email, message });
+    // await contact.save();
+
+    // Envoie une réponse réussie
+    res.status(200).json({ message: "Message sent successfully" });
+  } catch (error) {
+    // Gestion des erreurs
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+*/
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
@@ -19,23 +39,28 @@ mongoose.connection.on("error", (err) => {
   console.error("MongoDB connection error:", err);
 });
 
+//création du schema
+// bug : le nom de la collection n'est pas pris en compte
+const contactSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: false,
+    },
+    message: {
+      type: String,
+      required: true,
+    },
+  },
+  { collection: "itsgravyCollection" }
+);
 
-const contactSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  message: {
-    type: String,
-    required: true,
-  },
-});
-
+//création du modèle
 const Contact = mongoose.model("Contact", contactSchema);
 
 app.use(bodyParser.json());
