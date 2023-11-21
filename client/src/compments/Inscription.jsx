@@ -1,6 +1,10 @@
 const Inscription = () => {
   return (
-    <form action="/inscription" method="post" className="grid grid-cols-2">
+    <form
+      action="/inscription"
+      method="post"
+      className="grid grid-cols-2 p-10 gap-5 border-2 border-secondary rounded-xl backdrop-blur-sm bg-fuchsia-700/30"
+    >
       <h1 className="mb-5 text-5xl font-bold col-span-2">Become a Member</h1>
       <label htmlFor="firstname">First Name: </label>
       <input
@@ -21,7 +25,7 @@ const Inscription = () => {
       <label htmlFor="email">Email: </label>
       <input
         type="text"
-        placeholder="Cordell"
+        placeholder="cordellwalker@texas.com"
         id="email"
         className="input input-bordered input-secondary w-full max-w-xs"
       />
@@ -43,7 +47,7 @@ const Inscription = () => {
       />
 
       <button
-        className="btn btn-outline btn-secondary col-span-2 w-40 place-self-center"
+        className="btn btn-outline btn-secondary col-span-2 w-40 place-self-center mt-5"
         type="submit"
       >
         Submit

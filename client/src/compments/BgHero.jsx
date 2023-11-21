@@ -12,7 +12,7 @@ function BgHero({ children }) {
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-center text-neutral-content">
+        <div className="hero-content text-center text-neutral-content flex gap-16 flex-col lg:flex-row">
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">
               Welcome to <br />
@@ -23,7 +23,7 @@ function BgHero({ children }) {
               nightlife experience. Explore our exclusive options to make your
               evening as memorable as possible.
             </p>
-            <NavLink to="/contact" className="btn btn-secondary  mx-2">
+            <NavLink to="/contact" className="btn btn-secondary mx-2">
               Contact
             </NavLink>
             <NavLink to="/offerings" className="btn mx-2">

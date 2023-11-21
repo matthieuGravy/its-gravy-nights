@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const bodyParser = require("body-parser");
 
-const { connectDB, defineContactModel } = require("./db/connect");
+const { connectDB } = require("./db/connect");
 const { handleFormSubmission } = require("./routes/form");
 
 const app = express();
