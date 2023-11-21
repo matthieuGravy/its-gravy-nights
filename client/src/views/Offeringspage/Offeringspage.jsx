@@ -4,7 +4,7 @@ import { NormalTitle } from "../../compments/Normaltitle";
 
 const ProductMenus = (props) => {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 justify-items-center gap-8">
       {props.list.map((product, index) => (
         <Product key={index} {...product} />
       ))}
@@ -14,7 +14,7 @@ const ProductMenus = (props) => {
 
 const Product = ({ name, content, price, category, image, alt }) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-80 bg-base-100 shadow-xl">
       <figure>
         <img src={image} alt={alt} />
       </figure>
@@ -47,11 +47,15 @@ function Offerings() {
         title="Luxury Nights Await"
         subtitle="Elevate your nightlife experience with our exclusive offerings"
       />
-      <section>
-        <NormalTitle normalTitle={title1} normalSubtitle={subtitle1} />
-        <ProductMenus list={liste} />
-        <NormalTitle normalTitle={title2} normalSubtitle={subtitle2} />
-        <ProductMenus list={liste2} />
+      <section className="pt-20">
+        <article className="bg-base-200 container mx-auto pb-5 pt-10 rounded-lg px-1 ">
+          <NormalTitle normalTitle={title1} normalSubtitle={subtitle1} />
+          <ProductMenus list={liste} />
+        </article>
+        <article className="">
+          <NormalTitle normalTitle={title2} normalSubtitle={subtitle2} />
+          <ProductMenus list={liste2} />
+        </article>
         <NormalTitle normalTitle={title3} normalSubtitle={subtitle3} />
         <ProductMenus list={liste3} />
       </section>

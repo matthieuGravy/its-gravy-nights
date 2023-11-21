@@ -1,9 +1,9 @@
 const BigTitle = (props) => {
   return (
-    <div className="text-center">
-      <h1 className="text-5xl font-bold">{props.title}</h1>
-      <p className="text-xl">{props.subtitle}</p>
-    </div>
+    <section className="text-center flex justify-center flex-col gap-10 pt-20 bg-base-300 ">
+      <h1 className="text-8xl font-bold">{props.title}</h1>
+      <p className="text-2xl pb-16 px-10">{props.subtitle}</p>
+    </section>
   );
 };
 
