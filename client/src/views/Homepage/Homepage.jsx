@@ -1,9 +1,12 @@
 import { BgHero } from "../../compments/BgHero";
+import { Inscription } from "../../compments/Inscription";
 
 function Homepage() {
   return (
     <>
-      <BgHero />
+      <BgHero>
+        <Inscription />
+      </BgHero>
     </>
   );
 }

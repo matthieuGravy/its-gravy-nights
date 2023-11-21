@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
 
-function BgHero() {
+function BgHero({ children }) {
   return (
     <>
+      {/* Hero section */}
       <div
         className="hero min-h-screen"
         style={{
@@ -29,6 +30,7 @@ function BgHero() {
               Offerings
             </NavLink>
           </div>
+          <div>{children}</div>
         </div>
       </div>
     </>

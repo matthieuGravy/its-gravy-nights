@@ -1,10 +1,11 @@
 import { liste, liste2, liste3 } from "/src/data/data.js";
 import { BigTitle } from "../../compments/Bigtitle";
 import { NormalTitle } from "../../compments/Normaltitle";
+import { Navclient } from "../../compments/Navclient";
 
 const ProductMenus = (props) => {
   return (
-    <div className="grid grid-cols-1 justify-items-center gap-8">
+    <div className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 pt-24">
       {props.list.map((product, index) => (
         <Product key={index} {...product} />
       ))}
@@ -21,9 +22,9 @@ const Product = ({ name, content, price, category, image, alt }) => {
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
         <p>{content}</p>
-        <p>{price}€</p>
+        <p>{category}</p>
         <div className="card-actions justify-end">
-          <div className="badge badge-outline">{category}</div>
+          <div className="badge badge-outline px-3 py-3">{price} €</div>
         </div>
       </div>
     </div>
@@ -42,22 +43,26 @@ function Offerings() {
     "For those looking for something unusual and completely wild, discover our three unique experiences that defy the ordinary.";
 
   return (
-    <div>
+    <div className="bg-base-200">
+      <Navclient />
       <BigTitle
         title="Luxury Nights Await"
         subtitle="Elevate your nightlife experience with our exclusive offerings"
-      />
-      <section className="pt-20">
-        <article className="bg-base-200 container mx-auto pb-5 pt-10 rounded-lg px-1 ">
+      ></BigTitle>
+
+      <section className="py-20 flex flex-col gap-y-24 ">
+        <article className="bg-base-300 container mx-auto pb-24 pt-16 rounded-lg px-1 ">
           <NormalTitle normalTitle={title1} normalSubtitle={subtitle1} />
           <ProductMenus list={liste} />
         </article>
-        <article className="">
+        <article className="bg-base-300 container mx-auto pb-24 pt-16 rounded-lg px-1 ">
           <NormalTitle normalTitle={title2} normalSubtitle={subtitle2} />
           <ProductMenus list={liste2} />
         </article>
-        <NormalTitle normalTitle={title3} normalSubtitle={subtitle3} />
-        <ProductMenus list={liste3} />
+        <article className="bg-base-300 container mx-auto pb-24 pt-16 rounded-lg px-1 ">
+          <NormalTitle normalTitle={title3} normalSubtitle={subtitle3} />
+          <ProductMenus list={liste3} />
+        </article>
       </section>
     </div>
   );
