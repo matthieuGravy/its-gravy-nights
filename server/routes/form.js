@@ -10,7 +10,6 @@ async function handleFormSubmission(req, res) {
 
     // Sauvegarde dans la base de données
     await contact.save();
-
     // Envoie une réponse réussie
     res.status(200).json({ message: "Message sent successfully" });
   } catch (error) {

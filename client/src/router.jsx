@@ -7,6 +7,7 @@ import Restaurant from "./views/Restaurantpage/Restaurantpage";
 import Contact from "./views/Contact/Contactpage";
 import ErrorPage from "./views/ErrorPage/ErrorPage";
 import Send from "./views/Sendpage/Sendpage";
+import Admin from "./views/Adminpage/Adminpage";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
       { path: "/restaurant", element: <Restaurant /> },
       { path: "/contact", element: <Contact /> },
       { path: "/send-form", element: <Send /> },
+      { path: "/admin", element: <Admin /> },
     ],
   },
 ]);
