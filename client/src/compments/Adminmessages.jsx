@@ -11,13 +11,35 @@ function Adminmessages() {
     );
   };
 
-  const Messages = ({ name, email, message }) => {
+  const Messages = ({ _id, name, email, message }) => {
+    const handleDelete = async () => {
+      try {
+        if (!_id) {
+          console.error("ID du message non défini.");
+          return;
+        }
+
+        // Faites une requête pour supprimer le message avec l'ID
+        await fetch(`http://localhost:3000/delete-message/${_id}`, {
+          method: "DELETE",
+        });
+
+        // Mise à jour de l'état avec les messages mis à jour (moins le message supprimé)
+        setMessages((prevMessages) =>
+          prevMessages.filter((prevMessage) => prevMessage._id !== _id)
+        );
+      } catch (error) {
+        console.error("Erreur lors de la suppression du message :", error);
+      }
+    };
+
     return (
       <div className="card w-80 bg-base-100 shadow-xl">
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
           <p>{email}</p>
           <p>{message}</p>
+          <button onClick={handleDelete}>Supprimer</button>
         </div>
       </div>
     );
@@ -29,7 +51,7 @@ function Adminmessages() {
     try {
       const response = await fetch("http://localhost:3000/list-contact");
       const data = await response.json();
-      const messages = data.messages; // Accédez à la clé 'messages' dans les données
+      const messages = data.messages;
       setMessages(messages);
       console.log(messages);
     } catch (error) {

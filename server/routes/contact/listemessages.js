@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const { ContactModel } = require("../db/connect");
+const { ContactModel } = require("../../db/connect");
 
 async function getMessages(req, res) {
   try {
