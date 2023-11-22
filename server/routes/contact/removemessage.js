@@ -6,6 +6,7 @@ async function deleteMessage(req, res) {
   try {
     // Récupère l'ID à partir des paramètres de requête
     const messageId = req.params.id;
+    console.log(messageId + " : " + typeof messageId);
 
     // Vérifie si l'ID est valide
     if (!mongoose.Types.ObjectId.isValid(messageId)) {
