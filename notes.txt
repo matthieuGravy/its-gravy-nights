@@ -1,0 +1,40 @@
+//cookies httponly pour sécuriser les cookies xss
+//ajouter des tokens csrf pour sécuriser les formulaires
+// définir la durée de vie des cookies
+// recupèrer les cookies : req.headers.cookie
+// récupérer le cookie : req.cookies (avec cookie-parser)
+// définir un cookie : res.cookie("nom", "valeur", {options})
+// supprimer un cookie : res.clearCookie("nom")
+// définir un cookie signé : res.cookie("nom", "valeur", {signed: true})
+// récupérer un cookie signé : req.signedCookies (avec cookie-parser)
+// définir un cookie sécurisé : res.cookie("nom", "valeur", {secure: true})
+// définir un cookie httpOnly : res.cookie("nom", "valeur", {httpOnly: true})
+// définir un cookie SameSite : res.cookie("nom", "valeur", {sameSite: true})
+// définir un cookie SameSite : res.cookie("nom", "valeur", {sameSite: "strict"})
+// définir un cookie SameSite : res.cookie("nom", "valeur", {sameSite: "lax"})
+// définir un cookie SameSite : res.cookie("nom", "valeur", {sameSite: "none"})
+// définir un cookie SameSite : res.cookie("nom", "valeur", {sameSite: "none", secure: true})
+// définir un cookie SameSite : res.cookie("nom", "valeur", {sameSite: "none", secure: true, httpOnly: true})
+// définir un cookie SameSite : res.cookie("nom", "valeur", {sameSite: "none", secure: true, httpOnly: true, domain: "mondomaine.fr"})
+// définir un cookie SameSite : res.cookie("nom", "valeur", {sameSite: "none", secure: true, httpOnly: true, domain: "mondomaine.fr", path: "/chemin"})
+// définir un cookie SameSite : res.cookie("nom", "valeur", {sameSite: "none", secure: true, httpOnly: true, domain: "mondomaine.fr", path: "/chemin", maxAge: 1000 * 60 * 60 * 24 * 7})
+
+//session
+// définir une session : req.session.nom = "valeur"
+// récupérer une session : req.session.nom
+// supprimer une session : req.session.destroy()
+// définir une session signée : req.session.nom = "valeur"
+// récupérer une session signée : req.session.nom
+// supprimer une session signée : req.session.destroy()
+// définir une session sécurisée : req.session.nom = "valeur"
+// récupérer une session sécurisée : req.session.nom
+// supprimer une session sécurisée : req.session.destroy()
+// définir une session httpOnly : req.session.nom = "valeur"
+// récupérer une session httpOnly : req.session.nom
+// supprimer une session httpOnly : req.session.destroy()
+// gérer la session : req.session.regenerate()
+// req.session.destroy() /
+// req.session.reload()
+// req.session.save()
+// req.session.touch()
+// req.session.cookie.maxAge = 1000 * 60 * 60 * 24 * 7
