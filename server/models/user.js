@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const userSchema = new mongoose.Schema(
   {
@@ -28,14 +29,23 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: false,
     },
-    password2: {
-      type: String,
-      required: true,
-      unique: false,
-    },
   },
   { collection: "Itsgravymember" }
 );
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password1")) {
+    return next();
+  }
+
+  try {
+    // Hacher le mot de passe avec bcrypt
+    const hashedPassword = await bcrypt.hash(this.password1, 10);
+    this.password1 = hashedPassword;
+    next();
+  } catch (error) {
+    return next(error);
+  }
+});
 
 const UserModel = mongoose.model("User", userSchema);
 

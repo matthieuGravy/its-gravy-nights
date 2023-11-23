@@ -15,7 +15,6 @@ async function handleSign(req, res) {
       password1,
       password2,
     });
-
     // Sauvegarde dans la base de données
     await user.save();
     // Envoie une réponse réussie

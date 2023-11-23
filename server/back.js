@@ -13,7 +13,7 @@ const { handleFormSubmission } = require("./routes/contact/formulairecontact");
 const { getMessages } = require("./routes/contact/listemessages");
 const { deleteMessage } = require("./routes/contact/removemessage");
 const { getMessageById } = require("./routes/contact/formulairemessagebyid");
-const { handleSign } = require("./routes/inscription/auth");
+const { handleSign } = require("./routes/user/createUsers");
 
 const app = express();
 const port = 3000;

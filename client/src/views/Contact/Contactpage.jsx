@@ -16,7 +16,7 @@ function Contact() {
       body: JSON.stringify(formData),
     });
     const body = await response.text();
-    console.log(body);
+    // console.log(body);
   };
   return (
     <>
