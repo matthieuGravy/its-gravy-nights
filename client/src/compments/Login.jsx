@@ -7,6 +7,7 @@ const login = () => {
         <input type="text" placeholder="HighKicker58"></input>
         <label htmlFor="password">Password </label>
         <input type="password" placeholder="choose a password"></input>
+        <button type="submit">Login</button>
       </form>
     </div>
   );

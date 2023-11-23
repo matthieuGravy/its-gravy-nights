@@ -2,12 +2,11 @@ import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
-    <div>
-      <h1>Footer</h1>
-      <NavLink end to="/admin">
+    <section className="h-20 flex items-center justify-center ">
+      <NavLink end to="/admin" className="btn">
         Admin
       </NavLink>
-    </div>
+    </section>
   );
 }
 

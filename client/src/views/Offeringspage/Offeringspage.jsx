@@ -2,31 +2,14 @@ import { liste, liste2, liste3 } from "/src/data/data.js";
 import { BigTitle } from "../../compments/Bigtitle";
 import { NormalTitle } from "../../compments/Normaltitle";
 import { Navclient } from "../../compments/Navclient";
+import { CardProduct } from "../../compments/CardProduct";
 
 const ProductMenus = (props) => {
   return (
     <div className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 pt-24">
       {props.list.map((product, index) => (
-        <Product key={index} {...product} />
+        <CardProduct key={index} {...product} />
       ))}
-    </div>
-  );
-};
-
-const Product = ({ name, content, price, category, image, alt }) => {
-  return (
-    <div className="card w-80 bg-base-100 shadow-xl">
-      <figure>
-        <img src={image} alt={alt} />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">{name}</h2>
-        <p>{content}</p>
-        <p>{category}</p>
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline px-3 py-3">{price} €</div>
-        </div>
-      </div>
     </div>
   );
 };
@@ -50,7 +33,7 @@ function Offerings() {
         subtitle="Elevate your nightlife experience with our exclusive offerings"
       ></BigTitle>
 
-      <section className="py-20 flex flex-col gap-y-24 ">
+      <section className="py-36 flex flex-col gap-y-36 ">
         <article className="bg-base-300 container mx-auto pb-24 pt-16 rounded-lg px-1 ">
           <NormalTitle normalTitle={title1} normalSubtitle={subtitle1} />
           <ProductMenus list={liste} />

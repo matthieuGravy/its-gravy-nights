@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-function BgHero({ children }) {
+function BgHero() {
   return (
     <>
       {/* Hero section */}
@@ -12,13 +12,13 @@ function BgHero({ children }) {
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-center text-neutral-content flex gap-16 flex-col lg:flex-row">
-          <div className="max-w-md">
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md pt-40">
             <h1 className="mb-5 text-5xl font-bold">
               Welcome to <br />
               It's Gravy Nights
             </h1>
-            <p className="mb-5">
+            <p className="mb-5 text-lg">
               where luxury meets extravagance to offer you an unforgettable
               nightlife experience. Explore our exclusive options to make your
               evening as memorable as possible.
@@ -30,7 +30,6 @@ function BgHero({ children }) {
               Offerings
             </NavLink>
           </div>
-          <div>{children}</div>
         </div>
       </div>
     </>

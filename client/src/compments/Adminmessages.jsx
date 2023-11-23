@@ -39,7 +39,7 @@ function Adminmessages() {
           <h2 className="card-title">{name}</h2>
           <p>{email}</p>
           <p>{message}</p>
-          <button onClick={handleDelete}>Supprimer</button>
+          <button onClick={handleDelete}>Remove</button>
         </div>
       </div>
     );
@@ -53,7 +53,6 @@ function Adminmessages() {
       const data = await response.json();
       const messages = data.messages;
       setMessages(messages);
-      console.log(messages);
     } catch (error) {
       console.error("Erreur lors de la récupération des données :", error);
     }
