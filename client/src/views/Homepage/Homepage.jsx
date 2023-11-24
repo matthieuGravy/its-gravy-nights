@@ -8,9 +8,11 @@ function Homepage() {
     <>
       <main className="bg-base-200">
         <BgHero />
-        <Mission />
-        <Bestseller />
-        <Inscription />
+        <section className="flex flex-col gap-y-36">
+          <Mission />
+          <Bestseller />
+          <Inscription />
+        </section>
       </main>
     </>
   );

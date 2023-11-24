@@ -24,7 +24,7 @@ const liste = [
     price: 2000,
     image: "./src/assets/gold.png",
     alt: "Image du produit 3",
-    category: "Vegetarian",
+    category: "",
   },
 ];
 
@@ -54,7 +54,7 @@ const liste2 = [
     price: 5000,
     image: "./src/assets/diamond.png",
     alt: "Image du produit 3",
-    category: "Meat",
+    category: "",
   },
 ];
 

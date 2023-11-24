@@ -7,7 +7,7 @@ const Bestseller = () => {
   const deuxiemeElement = liste2[1];
   const premierElement = liste3[0];
   return (
-    <section className="bg-base-300 container mx-auto pb-24 pt-16 rounded-lg px-1 ">
+    <section className="bg-base-300 container mx-auto pb-24 pt-16 rounded-lg px-1">
       <NormalTitle normalTitle="Our crime is to satisfy you" />
       <article className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 pt-24">
         <CardProduct

@@ -52,10 +52,10 @@ export default function Nav() {
               </li>
               <li>
                 <NavLink
-                  to="/restaurant"
+                  to="/the-club"
                   className={({ isActive }) => (isActive ? "bg-secondary" : "")}
                 >
-                  Restaurant
+                  The Club
                 </NavLink>
               </li>
               <li>

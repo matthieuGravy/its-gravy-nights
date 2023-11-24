@@ -38,7 +38,7 @@ const Inscription = () => {
     }
   };
   return (
-    <article className="container-sm max-w-md  m-auto py-40">
+    <article className="container-sm max-w-md  m-auto">
       <form
         onSubmit={handleRegister}
         className="grid grid-cols-3 p-10 gap-5 border-2 border-secondary rounded-xl backdrop-blur-sm bg-fuchsia-700/30 shadow-xl"

@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Homepage from "./views/Homepage/Homepage";
 import Offerings from "./views/Offeringspage/Offeringspage";
 import Pictures from "./views/picturespage/picturespage";
-import Restaurant from "./views/Restaurantpage/Restaurantpage";
+import Aboutus from "./views/Aboutus/Aboutus";
 import Contact from "./views/Contact/Contactpage";
 import ErrorPage from "./views/ErrorPage/ErrorPage";
 import Send from "./views/Sendpage/Sendpage";
@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
       { index: true, element: <Homepage /> },
       { path: "/offerings", element: <Offerings /> },
       { path: "/picture", element: <Pictures /> },
-      { path: "/restaurant", element: <Restaurant /> },
+      { path: "/the-club", element: <Aboutus /> },
       { path: "/contact", element: <Contact /> },
       { path: "/send-form", element: <Send /> },
       { path: "/admin", element: <Admin /> },
