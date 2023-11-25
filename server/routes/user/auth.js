@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const { UserModel } = require("../../models/user.js");
+const { UserModel } = require("../../db/connect");
 
 async function handleLogin(req, res) {
   try {
@@ -12,7 +12,7 @@ async function handleLogin(req, res) {
 
     // Rechercher l'utilisateur par pseudo
     const user = await UserModel.findOne({ pseudo });
-
+    console.log(user);
     // Vérifier si l'utilisateur existe
     if (!user) {
       return res.status(401).json({ error: "User not found" });

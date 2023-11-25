@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 const Login = () => {
   const [pseudo, setPseudo] = useState("");
   const [password1, setPassword1] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleAuth = async (e) => {
     e.preventDefault();
@@ -17,16 +21,18 @@ const Login = () => {
       if (!response.ok) {
         throw new Error("HTTP error " + response.status);
       } else {
-        alert("Authentication successful");
+        setSuccess("Authentication successful");
       }
     } catch (err) {
-      console.error(err);
+      setError(err.message);
     }
   };
 
   return (
     <div>
       <h1>Login</h1>
+      {error && <p>{error}</p>}
+      {success && <p>{success}</p>}
       <form onSubmit={handleAuth}>
         <label htmlFor="pseudo">Pseudo </label>
         <input
@@ -47,3 +53,5 @@ const Login = () => {
     </div>
   );
 };
+
+export { Login };

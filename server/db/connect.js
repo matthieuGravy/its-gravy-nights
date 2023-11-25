@@ -3,6 +3,7 @@ require("dotenv").config();
 const config = require("../config");
 
 const { contactSchema } = require("../models/contact");
+const { userSchema } = require("../models/user");
 
 function connectDB() {
   mongoose.connect(process.env.MONGO_URI, {
@@ -16,5 +17,6 @@ function connectDB() {
 }
 
 const ContactModel = mongoose.model("Contact", contactSchema);
+const UserModel = mongoose.model("User", userSchema);
 
-module.exports = { connectDB, ContactModel };
+module.exports = { connectDB, ContactModel, UserModel };

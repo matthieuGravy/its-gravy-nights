@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { UserModel } = require("../../models/user.js");
+const { UserModel } = require("../../db/connect");
 
 async function handleSign(req, res) {
   try {
